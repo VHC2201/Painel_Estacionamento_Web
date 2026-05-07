@@ -40,6 +40,14 @@
         <h1>Gestão de Vagas - Admin</h1>
         <p>Visão geral do pátio para o gerente do estacionamento.</p>
 
+        @if(session('sucesso'))
+                <div style="background: #d4edda; color: #155724; padding: 1em; border-radius: 0.25em; margin-bottom: 1em;">
+                    {{ session('sucesso') }}
+                </div>
+            @endif
+
+            <a href="{{ route('admin.vagas.create') }}" style="display: inline-block; background: #007bff; color: white; padding: 0.6em 1em; text-decoration: none; border-radius: 0.25em;">+ Nova Vaga</a>
+
         <table>
             <thead>
                 <tr>
